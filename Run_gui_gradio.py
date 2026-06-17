@@ -1022,6 +1022,10 @@ CUSTOM_CSS = """
 .generate-btn { font-size: 1.1em !important; font-weight: 600 !important; }
 .stop-btn { font-size: 1.1em !important; font-weight: 600 !important; }
 .json-editor textarea { font-family: 'Consolas', 'Monaco', monospace !important; font-size: 0.85em !important; }
+
+/* Fix Gradio overriding text color inside the visual editor */
+#ds-editor-root, #ds-editor-root * { color: #ddd !important; }
+#ds-editor-root input, #ds-editor-root textarea, #ds-editor-root select { color: #ddd !important; background: #1a1a1a !important; }
 """
 
 
@@ -1295,7 +1299,7 @@ CANVAS_HTML = r"""
   grid-template-columns: minmax(420px, 1fr) 320px;
   gap: 8px;
   font-family: ui-sans-serif, system-ui, sans-serif;
-  color: #ddd;
+  color: #ddd; 
   --ds-bg: #1a1a1a;
   --ds-panel: #242424;
   --ds-border: #3a3a3a;
